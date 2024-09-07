@@ -1,0 +1,11 @@
+<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Plus" clip-path="url(#clip0_227_5)">
+<circle id="PlusOutline" cx="12.5" cy="12.5" r="12" stroke="white"/>
+<path id="PlusIcon" d="M10 8L16 13L10 18" stroke="white"/>
+</g>
+<defs>
+<clipPath id="clip0_227_5">
+<rect width="25" height="25" fill="white"/>
+</clipPath>
+</defs>
+</svg>

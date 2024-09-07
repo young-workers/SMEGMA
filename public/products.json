@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Hate Crime Soda",
+        "price": 499,
+        "image": "ASSETS/product-1.png"
+    },
+    {
+        "id": 2,
+        "name": "Genocide Soda",
+        "price": 599,
+        "image": "ASSETS/product-2.png"
+    },
+    {
+        "id": 3,
+        "name": "Roid Rage Preworkout",
+        "price": 859,
+        "image": "ASSETS/product-3.png"
+    }
+]

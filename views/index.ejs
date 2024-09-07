@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+
+    <link rel="stylesheet" href="/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    </head>
+    <body>
+        <header class="navbar-container">
+            <div class="navbar-container-2">
+                <div class="navbar">
+                    <a href="#"><img src="ASSETS/logo.png"/></a>
+                    <div class="navbar-items">
+                        <a class="navbar-item" href="#catalog">Catalogue</a>
+                        <a class="navbar-item" href="#reviews">Reviews</a>
+                        <div id="mobile-menu">
+                            <div class="menu-bar"></div>
+                            <div class="menu-bar"></div>
+                            <div class="menu-bar"></div>
+                        </div>
+                        <div id="mobile-cart">
+                            <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="Cart">
+                                <g id="CartBtn">
+                                <path id="CartBody" d="M1 1H5L7 14H19L22 5H8" stroke="white"/>
+                                <circle id="CartWheel1" cx="8.5" cy="18.5" r="1.5" stroke="white"/>
+                                <circle id="CartWheel2" cx="17.5" cy="18.5" r="1.5" stroke="white"/>
+                                </g>
+                                </g>
+                            </svg>
+                            <span class="cart-number">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-nav">
+                <a class="mobile-nav-item" href="#">Catalogue</a>
+                <a class="mobile-nav-item" href="#">Reviews</a>
+                <form class="nav-submit" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="2529292a-9240-45fa-99a3-ad34bca3a1c8">
+                    <input type="email" name="footer email" class="nav-input" placeholder="Enter your email">
+                    <button type="submit" class="nav-submit-btn">
+                        <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="Arrow" clip-path="url(#clip0_140_2)">
+                            <path id="FooterArrowIcon" d="M0 8.5H19M19 8.5L11.6923 1M19 8.5L11.6923 16" stroke="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_140_2">
+                            <rect width="20" height="17" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div class="hero-text">
+                <h1>SMEGMA</h1>
+                <h1 class="hero-text-test"></h1>
+                <div>
+                    <p><b>Awaken your inner monster</b></p>
+                    <p>Be a real SIGMA, and drink the engine-oil based SMEGMA baverage. Feel the liquid rage supercharge you as the steroids we laced it with start working.</p>
+                </div>
+            </div>
+        </header>
+        <!------------------------- SHOPPING CAR TAB ------------------------->
+        <div class="cart-tab">
+            <div class="cart-nav">
+                <h2>Shopping Cart</h2>
+                <div class="tab-btns">
+                    <button class="checkout">
+                        <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="CheckOut">
+                            <g id="CheckOutCart">
+                            <path id="CartBody" d="M0 3H2.64208C3.13565 3 3.5554 3.36011 3.63045 3.84794L5.36955 15.1521C5.4446 15.6399 5.86435 16 6.35792 16H16.7792C17.2097 16 17.5918 15.7246 17.7279 15.3162L20.0613 8.31623C20.2771 7.66869 19.7951 7 19.1126 7H6.5" stroke="white"/>
+                            <circle id="CartWheel1" cx="7" cy="20.5" r="1.5" stroke="white"/>
+                            <circle id="CartWheel2" cx="16" cy="20.5" r="1.5" stroke="white"/>
+                            </g>
+                            <path id="CheckOutArrow" d="M9.5 3H15M15 3L13.0001 5M15 3L13.0001 1" stroke="white"/>
+                            </g>
+                        </svg>
+                    </button>
+                    <button class="close-tab">
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="X" clip-path="url(#clip0_119_2)">
+                            <g id="Xicon">
+                            <path id="Xone" d="M19 0L0 19" stroke="white"/>
+                            <path id="Xtwo" d="M0 0L19 19" stroke="white"/>
+                            </g>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_119_2">
+                            <rect width="20" height="20" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="list-cart">
+            </div>
+            <form action="/checkout" method="POST" class="pay-now-container">
+                <input type="submit" class="pay-now" value="Pay Now">
+            </form>
+        </div>
+        <!------------------------- SPINNING CAN ------------------------->
+        <section class="banner-container">
+            <div class="banner">
+                <div class="banner-product">
+                    <div class="soda"
+                    style="--url: url(ASSETS/can-label-rec.png)"></div>
+
+                    <div class="soda"
+                    style="--url: url(ASSETS/can-label-rec-2.png)"></div>
+                </div>
+                <div class="rock">
+                    <img src="ASSETS/floating-rock.png" alt="">
+                </div>
+            <div>
+        </section>
+        <!------------------------- CATALOGUE ------------------------->
+        <section class="carousel" id="catalog">
+            <div class="list">
+                <!--------------- PRODUCT 1 --------------->
+                <div class="item active" data-id="1">
+                    <figure>
+                        <img src="ASSETS/product-1.png" alt="">
+                    </figure>
+                    <div class="content">
+                        <p class="category">Energy Drink<br>$4.99</p>
+                        <h2 data-content="HATE CRIME">HATE CRIME</h2>
+                        <p class="description">Tired? Rest is for the weak. HATE CRIME will give you all the energy you need, so you can get back to hitting liberals with a baseball bat.</p>
+                        <div class="more">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button>See more</button>
+                        </div>
+                    </div>
+                </div>
+                <!--------------- PRODUCT 2 --------------->
+                <div class="item" data-id="2">
+                    <figure>
+                        <img src="ASSETS/product-2.png" alt="">
+                    </figure>
+                    <div class="content">
+                        <p class="category">Energy Drink<br>$5.99</p>
+                        <h2 data-content="GENOCIDE">GENOCIDE</h2>
+                        <p class="description">Experience the raw power of GENOCIDE. Turn your body into a killing machine with just one sip, and bathe in the blood of the innocent</p>
+                        <div class="more">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button>See more</button>
+                        </div>
+                    </div>
+                </div>
+                <!--------------- PRODUCT 3 --------------->
+                <div class="item" data-id="3">
+                    <figure>
+                        <img src="ASSETS/product-3.png" alt="">
+                    </figure>
+                    <div class="content">
+                        <p class="category">Preworkout<br>$8.59</p>
+                        <h2 data-content="ROID RAGE">ROID RAGE</h2>
+                        <p class="description">Crush your benchpress pr AND the skulls of your opps after just one sip of ROID RAGE - our flag soda laced with Class 5 steroids</p>
+                        <div class="more">
+                            <button class="add-to-cart">Add to cart</button>
+                            <button>See more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="arrows">
+                <button id="prev">
+                    <svg width="44" height="44" viewBox="0 0 44 44" fill="#2c2f49" xmlns="http://www.w3.org/2000/svg">
+                        <g id="PrevBtn" clip-path="url(#clip0_220_2)">
+                        <circle id="BtnOutline" cx="22" cy="22" r="21.5" stroke="#324073"/>
+                        <path id="BtnTriangle" d="M14 22L26 15V29L14 22Z" stroke="#F9F9F9"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_220_2">
+                        <rect width="44" height="44" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+                <button id="next">
+                    <svg width="44" height="44" viewBox="0 0 44 44" fill="#2c2f49" xmlns="http://www.w3.org/2000/svg">
+                        <g id="NextBtn" clip-path="url(#clip0_220_6)">
+                        <circle id="BtnOutline" cx="22" cy="22" r="21.5" stroke="#324073"/>
+                        <path id="BtnTriangle" d="M29 22L17 15V29L29 22Z" stroke="#F9F9F9"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_220_6">
+                        <rect width="44" height="44" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
+            <div class="indicators">
+                <div class="number">01</div>
+                <ul>
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+        <!------------------------- SLIDERS ------------------------->
+        <section class="social-proof-container" id="reviews">
+            <div class="social-proof">
+                <h2>Available at:</h2>
+                <div class="slider" style="--width: 100px; --height:100px; --quantity:10;">
+                    <div class="slider-list">
+                        <div class="slider-item" style="--position: 1" data-shop="walmart"><img src="ASSETS/LOGOS/walmart-logo.png" alt=""></div>
+                        <div class="slider-item" style="--position: 2" data-shop="spar"><img src="ASSETS/LOGOS/spar-logo.png" alt=""></div>
+                        <div class="slider-item" style="--position: 3" data-shop="shell"><img src="ASSETS/LOGOS/shell-logo.png" alt=""></div>
+                        <div class="slider-item" style="--position: 4" data-shop="7-11"><img src="ASSETS/LOGOS/seven-eleven-logo.png" alt=""></div>
+                        <div class="slider-item" style="--position: 5" data-shop="macro"><img src="ASSETS/LOGOS/macro-logo.png" alt=""></div>
+                        <div class="slider-item" style="--position: 6" data-shop="lidl"><img src="ASSETS/LOGOS/lidl-logo.png" alt=""></div>
+                        <div class="slider-item" style="--position: 7" data-shop="jeronimo"><img src="ASSETS/LOGOS/jeronimo-martins-logo.png" alt=""></div>
+                        <div class="slider-item" style="--position: 8" data-shop="coop"><img src="ASSETS/LOGOS/coop-logo.png" alt=""></div>
+                        <div class="slider-item" style="--position: 9" data-shop="bp"><img src="ASSETS/LOGOS/bp-logo.png" alt=""></div>
+                        <div class="slider-item" style="--position: 10" data-shop="adolf"><img src="ASSETS/LOGOS//adolf-logo.png" alt=""></div>
+                    </div>
+                </div>
+                <h3>What people say:</h3>
+                <div class="slider" reverse="true" style="--width: 350px; --height:240px; --quantity:5;">
+                    <div class="slider-list">
+                        <div class="review-item" style="--position: 1">
+                            <div class="review-info">
+                                <b>Jeffrey Epstein</b>
+                                <div class="stars">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                </div>
+                            </div>
+                            <p>Oh yes I highly recommend the drinks they go very well with all kinds of dormitives. My kids absolutely love it. I've been requesting frequent deliveries to my island and I haven't encountered any issues yet. </p>
+                        </div>
+                        <div class="review-item" style="--position: 2">
+                            <div class="review-info">
+                                <b>God</b>
+                                <div class="stars">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                </div>
+                            </div>
+                            <p>Should have erased yall niggas when I had the chance. wtf is this.</p>
+                        </div>
+                        <div class="review-item" style="--position: 3">
+                            <div class="review-info">
+                                <b>George Floyd</b>
+                                <div class="stars">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                </div>
+                            </div>
+                            <p>Smegma saved my LIFE. I was strolling down the street carrying a pack of fentanyl, when suddenly, out of nowewhere, a cop jumps on me and starts strangling me. He was so aggressive I was completely losing my breath. Fortunately just minutes before I downed ROID RAGE. Momentarily I felt a surge of energy. I pushed the cop off of me and suffocated him to death with my bare hands. Thank you Smegma.</p>
+                        </div>
+                        <div class="review-item" style="--position: 4">
+                            <div class="review-info">
+                                <b>Gamermoment</b>
+                                <div class="stars">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                </div>
+                            </div>
+                            <p>Hah... this drink peeerfectly suits my, well, rather dangerous persona *tips fedora*. Weak betas please themselves with worthless mainstream sodas, while a REAL lone wolf like me only drinks smegma. I've noticed my howls have been a lot louder since drinking HOMICIDE. I think the monster in me is awakening...</p>
+                        </div>
+                        <div class="review-item" style="--position: 5">
+                            <div class="review-info">
+                                <b>Rosa Parks</b>
+                                <div class="stars">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                    <img src="ASSETS/Star.svg" alt="">
+                                </div>
+                            </div>
+                            <p>Nah</p>
+                        </div>
+                    </div>
+                </div>
+                <h3>About:</h3>
+                <button class="about-button">Explore Smegma</button>
+            </div>
+        </section>
+        <!------------------------- FOOTER ------------------------->
+        <footer class="footer-container">
+            <div class="footer">
+                <div class="footer-col ftr-col-1">
+                    <img src="ASSETS/logo-white.png">
+                    <form class="ftr-btn" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="2529292a-9240-45fa-99a3-ad34bca3a1c8">
+                        <input type="email" name="footer email" class="footer-email-input" placeholder="Enter your email">
+                        <button type="submit" class="footer-submit-btn">
+                            <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="Arrow" clip-path="url(#clip0_140_2)">
+                                <path id="FooterArrowIcon" d="M0 8.5H19M19 8.5L11.6923 1M19 8.5L11.6923 16" stroke="black"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_140_2">
+                                <rect width="20" height="17" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </form>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+  	 			    </div>
+                </div>
+                <div class="footer-col">
+                    <label data-en="Company">Company</label>
+                    <ul>
+                        <li><a href="#" >Products</a></li>
+                        <li><a href="#" >Get in Contact</a></li>
+                        <li><a href="#" >About</a></li>
+                        <li><a href="#" >Our Team</a></li>
+                        <li><a href="#" >Jobs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <label >Technical</label>
+                    <ul>
+                        <li><a href="#">Sitemap</a></li>
+                        <li><a href="#" >Privacy Policy</a></li>
+                        <li><a href="#" >Cookies Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div class="copyright">
+            <p>Copyright @ Oversee.pl</p>
+        </div>
+        <script src="/script.js"></script>
+</head>
